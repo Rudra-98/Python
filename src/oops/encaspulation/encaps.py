@@ -24,12 +24,19 @@ class SavingsAccount(BankAccount):
 
 acc = BankAccount("Alice", 1000, 9999)
 
-print(acc.owner)            # Works fine
-print(acc._balance)
+sav_acc = SavingsAccount("Bob", 1000, 9999)
 
-print(acc.__pin)# Works, but discouraged
-# print(acc.verify_pin(9999))            # AttributeError!
-print(acc._BankAccount__pin)
+
+print(sav_acc.owner)
+
+print(sav_acc.show_balance())
+
+print(acc.owner)        # Works fine
+print(acc._balance)
+#
+# print(acc.__pin)# Works, but discouraged
+# # print(acc.verify_pin(9999))            # AttributeError!
+# print(acc._BankAccount__pin)
 
 
 print(acc.return_pin())# Works (but don't do this)
