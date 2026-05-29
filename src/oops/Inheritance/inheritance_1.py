@@ -1,25 +1,20 @@
-class Animal:
+from logging import critical
+class Bird:
     def __init__(self,name):
-        self.name = name
+        self.name=name
 
-    def say(self):
-        print("Animal is saying")
 
-class Dog(Animal):
-    def __init__(self,name,dog_name):
+class Crow(Bird):
+    def __init__(self,name,sound):
         super().__init__(name)
-        self.dog_name = dog_name
-
-    def say(self):
-        print("Bow Bow")
-
-class Cat(Animal):
-    def say(self):
-        print("Meow")
-
-dog = Dog("Animal",'Rocky')
-dog.say()
-print(dog.name)
-print(dog.dog_name)
+        self.sound =sound
 
 
+    def bird_sound(self):
+        print("crow")
+
+
+crow_1 = Crow("crow_1",'croww')
+
+print(crow_1.name)
+print(crow_1.sound)
