@@ -7,3 +7,19 @@ def task(name):
 
 task("A")
 task("B")
+
+
+
+# shallow copy and deep copy
+#assume a = [[3,4],[1,2]]
+# In shallow copy , This is the key concept of shallow copy:
+
+# b.append(5)                                               ❌ No — outer list is a new object
+# b[0].append(9)                                            ✅ Yes — inner objects are shared
+
+#
+#
+# One liner to remember:
+#
+# Shallow copy → new outer object, but shared inner objects
+# Deep copy → new outer object, and brand new inner objects too
