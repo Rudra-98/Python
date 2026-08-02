@@ -9,11 +9,9 @@ class Solution:
                 result.append(k)
                 return
             if op < n:
-                k = k + "("
-                generate_par(k, op +1, cl)
+                generate_par(k + "(", op +1, cl)
             if cl < op:
-                k = k + ")"
-                generate_par(k, op, cl +1)
+                generate_par(k + ")", op, cl +1)
 
         generate_par(k,op,cl)
 
