@@ -34,8 +34,8 @@ print(sav_acc.show_balance())
 print(acc.owner)        # Works fine
 print(acc._balance)
 #
-# print(acc.__pin)# Works, but discouraged
-# print(acc.verify_pin(9999))            # AttributeError!
+print(acc.__pin)# Works, but discouraged
+print(acc.verify_pin(9999))            # AttributeError!
 # print(acc._BankAccount__pin)
 
 
