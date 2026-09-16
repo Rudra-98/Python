@@ -23,17 +23,17 @@ def say_hello():
 say_hello()
 #################################################################################################################
 
-attempt_count = 0
-
-@retry(times=3, exceptions=(ValueError,))
-def flaky():
-    global attempt_count
-    attempt_count += 1
-    if attempt_count < 3:
-        raise ValueError(f"failed on attempt {attempt_count}")
-    return "success!"
-
-print(flaky())
-# Attempt 1 failed: failed on attempt 1
-# Attempt 2 failed: failed on attempt 2
-# success!
+# attempt_count = 0
+#
+# @retry(times=3, exceptions=(ValueError,))
+# def flaky():
+#     global attempt_count
+#     attempt_count += 1
+#     if attempt_count < 3:
+#         raise ValueError(f"failed on attempt {attempt_count}")
+#     return "success!"
+#
+# print(flaky())
+# # Attempt 1 failed: failed on attempt 1
+# # Attempt 2 failed: failed on attempt 2
+# # success!
